@@ -34,10 +34,6 @@ const stopLoading = () => {
     Swal.close()
 }
 
-const reloadTable = () => {
-    $('#yajra').DataTable().draw(false);
-}
-
 const resetForm = (form) => {
     $(form)[0].reset();
 }
@@ -46,4 +42,5 @@ const resetValidation = () => {
     $('.is-invalid').removeClass('is-invalid');
     $('.is-valid').removeClass('is-valid');
     $('.invalid-feedback').remove();
+
 }

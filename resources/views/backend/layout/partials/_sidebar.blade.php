@@ -5,99 +5,102 @@
             <div class="d-flex justify-content-between">
                 <div class="logo">
                     <a href="{{ route('backend.main') }}">
-                        {{-- <img src="{{ asset('assets/backend') }}/images/logo/logo.png" alt="Logo" srcset=""> --}}
-                        <span class="d-none d-lg-inline-block">Sistem Informasi Klinik</span>
+                        {{-- <img src="{{ asset('assets/backend/images/logo/logo.png') }}" alt="Logo"> --}}
+                        <span class="d-none d-lg-inline-block fw-bold">Sistem Informasi Klinik</span>
                     </a>
                 </div>
                 <div class="toggler">
-                    <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                    <a href="#" class="sidebar-hide d-xl-none d-block">
+                        <i class="bi bi-x bi-middle"></i>
+                    </a>
                 </div>
             </div>
         </div>
+
         <div class="sidebar-menu">
             <ul class="menu">
-                {{-- <li class="sidebar-title">Menu</li>
+                <li class="sidebar-title">Menu</li>
 
-                <li class="sidebar-item ">
-                    <a href="{{ route('backend.main') }}" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
+                <li class="sidebar-item {{ Request::is('backend') ? 'active' : '' }}">
+                    <a href="{{ route('backend.main') }}" class="sidebar-link">
+                        <i class="bi bi-house-fill"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item has-sub {{ request()->routeIs('backend.orders.*') || request()->routeIs('backend.order-detail.*') ? 'active' : '' }}">
-                    <a href="#" class='sidebar-link'>
-                        <i class="bi bi-stack"></i>
-                        <span>Orders</span>
+                <li class="sidebar-item has-sub ">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-folder-fill"></i>
+                        <span>Master</span>
                     </a>
-                    <ul class="submenu {{ request()->routeIs('backend.orders.*') || request()->routeIs('backend.order-detail.*') ? 'active' : '' }}">
-                        <li class="submenu-item {{ request()->routeIs('backend.orders.*') ? 'active' : '' }}">
-                            <a href="{{ route('backend.order.index') }}">Order List</a>
+                    <ul class="submenu">
+                                        <li class="sidebar-item has-sub {{ Request::is('backend/kabupaten*') || Request::is('backend/provinsi*') ? 'active' : '' }}">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Wilayah</span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item {{ Request::is('backend/kabupaten*') ? 'active' : '' }}">
+                            <a href="{{ route('backend.kabupaten.index') }}" class="submenu-link">
+                                <i class="bi bi-map-fill"></i> Kabupaten
+                            </a>
                         </li>
-                        <li class="submenu-item {{ request()->routeIs('backend.order-details.*') ? 'active' : '' }}">
-                            <a href="{{ route('backend.order-detail.index') }}">Order Detail</a>
+                        <li class="submenu-item {{ Request::is('backend/provinsi*') ? 'active' : '' }}">
+                            <a href="{{ route('backend.provinsi.index') }}" class="submenu-link">
+                                <i class="bi bi-map-fill"></i> Provinsi
+                            </a>
                         </li>
                     </ul>
                 </li>
 
-                @if(Auth::user()->role == 'admin')
-                <li class="sidebar-item {{ Request::is('admin/events*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.events.index') }}" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-medical-fill"></i>
-                        <span>Events</span>
-                    </a>
+                        <li class="submenu-item {{ Request::is('backend/pegawai*') ? 'active' : '' }}">
+                            <a href="{{ route('backend.pegawai.index') }}" class="submenu-link">
+                                <i class="bi bi-person-fill"></i> Pegawai
+                            </a>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="#" class="submenu-link">
+                                <i class="bi bi-file-medical-fill"></i> Tindakan
+                            </a>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="#" class="submenu-link">
+                                <i class="bi bi-capsule-fill"></i> Obat
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
-                <li class="sidebar-item {{ Request::is('admin/episodes*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.episodes.index') }}" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-medical-fill"></i>
-                        <span>Episodes</span>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <span>Transaksi</span>
                     </a>
                 </li>
-
-                <li class="sidebar-item {{ Request::is('admin/categories*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.categories.index') }}" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-medical-fill"></i>
-                        <span>Categories</span>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                        <span>Laporan</span>
                     </a>
                 </li>
-
-                <li class="sidebar-item {{ Request::is('admin/tags*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.tags.index') }}" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-medical-fill"></i>
-                        <span>Tags</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item {{ request()->routeIs('backend.tikets.*') ? 'active' : '' }}">
-                    <a href="{{ route('backend.tikets.index') }}" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                        <span>Tikets</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item {{ request()->routeIs('backend.taxes.*') ? 'active' : '' }}">
-                    <a href="{{ route('backend.taxes.index') }}" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                        <span>Taxes</span>
-                    </a>
-                </li> --}}
 
                 <li class="sidebar-title">Account</li>
 
-                {{-- <li class="sidebar-item  ">
-                    <a href="table-datatable.html" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                <li class="sidebar-item">
+                    <a href="" class="sidebar-link">
+                        <i class="bi bi-person-fill"></i>
                         <span>User</span>
                     </a>
-                </li> --}}
-                {{-- @endif --}}
+                </li>
 
-                <li class="sidebar-item  ">
-                    <a href="table-datatable.html" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                        <span>Logout</span>
-                    </a>
+                <li class="sidebar-item">
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="sidebar-link btn w-100 text-start">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Logout</span>
+                        </button>
+                    </form>
                 </li>
 
             </ul>

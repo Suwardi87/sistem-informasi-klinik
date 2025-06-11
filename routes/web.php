@@ -1,14 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\PegawaiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\KabupatenController;
+use App\Http\Controllers\Backend\ProvinsiController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 Route::middleware('auth')->prefix('backend')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('backend.main');
+    Route::resource('/pegawai', PegawaiController::class)->names('backend.pegawai');
+    Route::resource('/kabupaten', KabupatenController::class)->names('backend.kabupaten');
+    Route::resource('/provinsi', ProvinsiController::class)->names('backend.provinsi');
 });
 
 

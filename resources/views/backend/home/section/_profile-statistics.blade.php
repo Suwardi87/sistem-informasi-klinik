@@ -17,7 +17,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="stats-icon purple">
-                                        <i class="iconly-boldShow"></i>
+                                        <i class="bi bi-eye-fill"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -34,7 +34,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="stats-icon blue">
-                                        <i class="iconly-boldProfile"></i>
+                                        <i class="bi bi-person-fill"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -51,7 +51,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="stats-icon green">
-                                        <i class="iconly-boldAdd-User"></i>
+                                        <i class="bi bi-plus-circle-fill"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -68,7 +68,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="stats-icon red">
-                                        <i class="iconly-boldBookmark"></i>
+                                        <i class="bi bi-bookmark-fill"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -112,7 +112,6 @@
                                         <td>Rp75,000</td>
                                         <td>Rp75,000</td>
                                     </tr>
-                                    <!-- Tambahkan baris lainnya sesuai kebutuhan -->
                                 </tbody>
                             </table>
                         </div>
@@ -129,10 +128,8 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="d-flex align-items-center">
-                                        <svg class="bi text-primary" width="32" height="32" fill="blue"
-                                            style="width:10px">
-                                            <use
-                                                xlink:href="{{ asset('assets/backend') }}/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                        <svg class="bi text-primary" width="32" height="32" fill="blue" style="width:10px">
+                                            <use xlink:href="{{ asset('assets/backend') }}/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
                                         </svg>
                                         <h5 class="mb-0 ms-3">Europe</h5>
                                     </div>
@@ -147,10 +144,8 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="d-flex align-items-center">
-                                        <svg class="bi text-success" width="32" height="32" fill="blue"
-                                            style="width:10px">
-                                            <use
-                                                xlink:href="{{ asset('assets/backend') }}/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                        <svg class="bi text-success" width="32" height="32" fill="blue" style="width:10px">
+                                            <use xlink:href="{{ asset('assets/backend') }}/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
                                         </svg>
                                         <h5 class="mb-0 ms-3">America</h5>
                                     </div>
@@ -165,10 +160,8 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="d-flex align-items-center">
-                                        <svg class="bi text-danger" width="32" height="32" fill="blue"
-                                            style="width:10px">
-                                            <use
-                                                xlink:href="{{ asset('assets/backend') }}/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                        <svg class="bi text-danger" width="32" height="32" fill="blue" style="width:10px">
+                                            <use xlink:href="{{ asset('assets/backend') }}/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
                                         </svg>
                                         <h5 class="mb-0 ms-3">Indonesia</h5>
                                     </div>
@@ -221,9 +214,7 @@
                                                 </div>
                                             </td>
                                             <td class="col-auto">
-                                                <p class=" mb-0">Wow amazing design! Can you make another
-                                                    tutorial for
-                                                    this design?</p>
+                                                <p class=" mb-0">Wow amazing design! Can you make another tutorial for this design?</p>
                                             </td>
                                         </tr>
                                     </tbody>
