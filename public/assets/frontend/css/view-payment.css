@@ -1,0 +1,205 @@
+body {
+    background-color: #f5f7fa;
+    font-family: Arial, sans-serif;
+}
+.section-title {
+    font-weight: bold;
+    color: #b8860b;
+    margin-bottom: 1rem;
+}
+.info-section {
+    margin-bottom: 2rem;
+}
+.info-section p {
+    margin: 0;
+}
+.info-section .row div {
+    margin-bottom: 0.5rem;
+}
+.content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.content img {
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+}
+.content .details {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+.content .details h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.content .details .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.content .details .info i {
+    margin-right: 10px;
+    color: #6c757d;
+}
+.content .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.btn-custom {
+    background-color: #d3d3d3;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+}
+.btn-custom:hover {
+    background-color: #b0b0b0;
+}
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .content img {
+        width: 80px;
+        height: 80px;
+    }
+    .content .details {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .content {
+        padding: 15px;
+    }
+    .content img {
+        width: 70px;
+        height: 70px;
+    }
+    .content .details h5 {
+        font-size: 16px;
+    }
+    .content .price {
+        font-size: 16px;
+    }
+    .btn-custom {
+        width: 100%;
+        padding: 0.5rem;
+    }
+}
+
+/* XL Devices (>1200px) */
+@media screen and (min-width: 1200px) {
+    .content {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+}
+
+/* LG Devices (992px-1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .content {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+}
+
+/* MD Devices (768px-991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .content {
+        padding: 15px;
+    }
+
+    .content img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* SM Devices (576px-767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .content {
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .content img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .content .details h5 {
+        font-size: 15px;
+    }
+
+    .content .price {
+        font-size: 15px;
+    }
+
+    .info-section {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* XS Devices (<575px) */
+@media screen and (max-width: 575px) {
+    .content {
+        padding: 10px;
+        margin: 8px;
+    }
+
+    .content img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .content .details {
+        margin-top: 8px;
+    }
+
+    .content .details h5 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .content .price {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .info-section {
+        margin-bottom: 1rem;
+    }
+
+    .info-section p {
+        font-size: 13px;
+    }
+
+    .btn-custom {
+        padding: 0.5rem;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+
+}
+.konten {
+    background-image: url('bg2.jpg');
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 110vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+.register-wrapper {
+    width: 600px;
+    /* max-width: 400px; */
+    background-color: #d3d3d38f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    /* margin-right: ; */
+}
+
+.register-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+.register-wrapper {
+    width: 600px;
+    /* max-width: 400px; */
+    background-color: #d3d3d38f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    /* margin-right: ; */
+}
+
+.register-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #218838;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1199px) {
+    .register-wrapper {
+        width: 70%;
+        margin-top: 50px;
+    }
+}
+
+/* Small devices (landscape phones) */
+@media screen and (max-width: 767px) {
+    .register-wrapper {
+        width: 85%;
+        padding: 20px;
+        margin-top: 30px;
+        left: 50%;
+    }
+
+    .register-container h1 {
+        font-size: 24px;
+    }
+
+    .form-group input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .register-btn,
+    .login-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Extra small devices (portrait phones) */
+@media screen and (max-width: 575px) {
+    .konten {
+        height: 100vh;
+        padding: 15px;
+    }
+
+    .register-wrapper {
+        width: 95%;
+        padding: 15px;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .register-container h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .register-btn,
+    .login-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .signup-link,
+    .login-link {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
+
+/* Handle very small devices */
+@media screen and (max-width: 320px) {
+    .register-wrapper {
+        padding: 10px;
+    }
+
+    .register-container h1 {
+        font-size: 18px;
+    }
+
+    .form-group input {
+        padding: 6px;
+    }
+}
