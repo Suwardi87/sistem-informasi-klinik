@@ -58,14 +58,26 @@
                                 <i class="bi bi-person-fill"></i> Pegawai
                             </a>
                         </li>
-                        <li class="submenu-item">
-                            <a href="#" class="submenu-link">
+                        <li class="submenu-item {{ Request::is('backend/pasien*') ? 'active' : '' }}">
+                            <a href="{{ route('backend.pasien.index') }}" class="submenu-link">
+                                <i class="bi bi-person-fill"></i> Pasien
+                            </a>
+                        </li>
+                        <li class="submenu-item {{ Request::is('backend/tindakan*') ? 'active' : '' }}">
+                            <a href="{{ route('backend.tindakan.index') }}" class="submenu-link">
                                 <i class="bi bi-file-medical-fill"></i> Tindakan
                             </a>
                         </li>
-                        <li class="submenu-item">
-                            <a href="#" class="submenu-link">
-                                <i class="bi bi-capsule-fill"></i> Obat
+                        <li class="submenu-item {{ Request::is('backend/obat*') ? 'active' : '' }}">
+                            <a href="{{ route('backend.obat.index') }}" class="submenu-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule-fill" viewBox="0 0 16 16">
+                                    <path d="M5.5 9a2 2 0 1 1 0 2 2 2 0 0 1 0-2Zm7 0a2 2 0 1 1 0 2 2 2 0 0 1 0-2Z"/>
+                                </svg> Obat
+                            </a>
+                        </li>
+                        <li class="submenu-item {{ Request::is('backend/kunjungan*') ? 'active' : '' }}">
+                            <a href="{{ route('backend.kunjungan.index') }}" class="submenu-link">
+                                <i class="bi bi-file-medical-fill"></i> Kunjungan
                             </a>
                         </li>
                     </ul>
@@ -87,7 +99,7 @@
                 <li class="sidebar-title">Account</li>
 
                 <li class="sidebar-item">
-                    <a href="" class="sidebar-link">
+                    <a href="{{ route('backend.user.index') }}" class="sidebar-link">
                         <i class="bi bi-person-fill"></i>
                         <span>User</span>
                     </a>

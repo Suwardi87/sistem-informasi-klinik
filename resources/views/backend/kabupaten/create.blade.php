@@ -1,6 +1,6 @@
 @extends('backend.layout.main')
 
-@section('title', 'Create Pegawai')
+@section('title', 'Create Data Kabupaten')
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/backend') }}/vendors/apexcharts/apexcharts.css">
@@ -27,18 +27,18 @@
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('backend.main') }}">Dashboard</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><a
-                        href="{{ route('backend.pegawai.index') }}">Pegawai</a></li>
+                        href="{{ route('backend.kabupaten.index') }}">Data kabupaten</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><a
-                        href="{{ route('backend.pegawai.create') }}">@yield('title')</a></li>
+                        href="{{ route('backend.kabupaten.create') }}">@yield('title')</a></li>
             </ol>
         </nav>
         <div class="d-flex justify-content-between w-100 flex-wrap">
             <div class="mb-3 mb-lg-0">
                 <h1 class="h4">@yield('title')</h1>
-                <p class="mb-0">Create Pegawai  </p>
+                <p class="mb-0">Create Data Kabupaten</p>
             </div>
             <div>
-                <a href="{{ route('backend.pegawai.index') }}" class="btn btn-outline-primary"><i
+                <a href="{{ route('backend.kabupaten.index') }}" class="btn btn-outline-primary"><i
                         class="fas fa-arrow-left me-1"></i> Back</a>
             </div>
         </div>
@@ -49,28 +49,28 @@
             <h4 class="card-title">@yield('title')</h4>
         </div>
         <div class="card-body">
-            <form action="{{ route('backend.pegawai.store') }}" method="POST" id="formPegawai"
+            <form action="{{ route('backend.kabupaten.store') }}" method="POST" id="formKabupaten"
                 class="needs-validation">
                 @csrf
-                <div class="row">
-                    <div class="col-md-6">
+                 <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="user_id" class="form-label">User</label>
-                            <select name="user_id" id="user_id"
-                                class="form-select select-single @error('user_id') is-invalid @enderror" required>
+                            <label for="provinsi_id" class="form-label">Provinsi</label>
+                            <select name="provinsi_id" id="provinsi_id"
+                                class="form-select select-single @error('provinsi_id') is-invalid @enderror" required>
                                 <option value="" hidden>-- choose --</option>
-                                @foreach ($users as $user)
-                                <option value="{{ $user->id }}" {{ old('user_id') == $user->id ? 'selected' : '' }}>{{ $user->name }}</option>
+                                @foreach ($provinsis as $provinsi)
+                                <option value="{{ $provinsi->id }}" {{ old('provinsi_id') == $provinsi->id ? 'selected' : '' }}>{{ $provinsi->nama }}</option>
                                 @endforeach
                             </select>
-                            @error('user_id')
+                            @error('provinsi_id')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="nama" class="form-label">Nama</label>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="my-3">
+                            <label for="nama" class="form-label">Nama Kabupaten</label>
                             <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama"
                                 name="nama" value="{{ old('nama') }}" required>
                             @error('nama')
@@ -80,57 +80,8 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="nip" class="form-label">NIP</label>
-                            <input type="text" class="form-control @error('nip') is-invalid @enderror" id="nip"
-                                name="nip" value="{{ old('nip') }}" required>
-                            @error('nip')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="jabatan" class="form-label">Jabatan</label>
-                            <input type="text"
-                                class="form-control @error('jabatan') is-invalid @enderror" id="jabatan"
-                                name="jabatan" value="{{ old('jabatan') }}" required>
-                            @error('jabatan')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="telepon" class="form-label">Telepon</label>
-                            <input type="text"
-                                class="form-control @error('telepon') is-invalid @enderror" id="telepon"
-                                name="telepon" value="{{ old('telepon') }}" required>
-                            @error('telepon')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="alamat" class="form-label">Alamat</label>
-                            <textarea name="alamat" id="alamat"
-                                class="form-control @error('alamat') is-invalid @enderror" rows="3"
-                                required>{{ old('alamat') }}</textarea>
-                            @error('alamat')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-
                 <div class="float-end">
-                    <a href="{{ route('backend.pegawai.index') }}" class="btn btn-secondary">Back</a>
+                    <a href="{{ route('backend.provinsi.index') }}" class="btn btn-secondary">Back</a>
                     <button type="submit" class="btn btn-primary btnSubmit">Submit</button>
                 </div>
             </form>
@@ -147,5 +98,6 @@
 <script src="{{ asset('assets/backend/library/jquery/jquery-3.7.1.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('assets/backend/js/helper.js') }}"></script>
-<script src="{{ asset('assets/backend/js/pegawai.js') }}"></script>
+<script src="{{ asset('assets/backend/js/kabupaten.js') }}"></script>
 @endpush
+

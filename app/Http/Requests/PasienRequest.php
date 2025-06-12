@@ -11,7 +11,7 @@ class PasienRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,14 @@ class PasienRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'nama' => 'required|string|max:50',
+            'nik' => 'required|string',
+            'jenis_kelamin' => 'required',
+            'tanggal_lahir' => 'required|date',
+            'alamat' => 'required|string|max:255',
+            'provinsi_id' => 'required|exists:provinsis,id',
+            'kabupaten_id' => 'nullable|exists:kabupatens,id',
+            'telepon' => 'nullable|string|max:20',
         ];
     }
 }

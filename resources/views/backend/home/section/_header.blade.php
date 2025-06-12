@@ -8,6 +8,9 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
             <li>
+                <a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __('Profile') }}</a>
+            </li>
+            <li>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit" class="dropdown-item">Logout</button>

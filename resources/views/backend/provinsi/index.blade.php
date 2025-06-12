@@ -30,7 +30,7 @@
     <div class="card border-0 shadow mb-4">
         <div class="card-body">
             <div class="table-responsive-sm">
-                <table class="table table-striped table-bordered" width="100%">
+                <table class="table table-striped table-bordered" width="100%" id="table-provinsi">
                     <thead>
                         <tr>
                             <th width="1%">No</th>
@@ -64,11 +64,9 @@
                     {{ $provinsis->links() }}
                 </div>
             </div>
-
-            {{-- @include('backend.order._modal-download') --}}
-            @include('backend.home.section._footer')
-
         </div>
+    </div>
+</div>
 
 @endsection
 

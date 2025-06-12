@@ -51,6 +51,23 @@ class KabupatenSeeder extends Seeder
                 'slug' => Str::slug('Kabupaten Jembrana'),
                 'provinsi_id' => 2,
             ],
-        ]);
+            [
+                'uuid' => Str::uuid(),
+                'nama' => 'Kabupaten Karangasem',
+                'slug' => Str::slug('Kabupaten Karangasem'),
+                'provinsi_id' => 3,
+            ],
+            [
+                'uuid' => Str::uuid(),
+                'nama' => 'Kabupaten Tabanan',
+                'slug' => Str::slug('Kabupaten Tabanan'),
+                'provinsi_id' => 3,
+            ],
+            [
+                'uuid' => Str::uuid(),
+                'nama' => 'Kabupaten Denpasar',
+                'slug' => Str::slug('Kabupaten Denpasar'),
+                'provinsi_id' => 3,
+            ],]);
     }
 }

@@ -26,9 +26,21 @@ class TransaksiController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+      public function store(TransaksiRequest $request)
     {
-        //
+       $data = $request->validated();
+        try {
+            $tindakan = $this->tindakanService->create($data);
+
+            return response()->json([
+                'message' => 'Data Tindakan Berhasil Ditambahkan...'
+            ]);
+        } catch (\Exception $error) {
+            return response()->json([
+                'message' => 'Data Tindakan Gagal Ditambahkan...' . $error->getMessage()
+            ]);
+        }
+    }
     }
 
     /**

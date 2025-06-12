@@ -43,10 +43,8 @@
                         @foreach ($kabupatens as $item)
                         <tr>
                             <td>{{ ($kabupatens->currentPage() - 1) * $kabupatens->perPage() + $loop->iteration }}</td>
-                            {{-- <td>{{ $item->komoditas->nama }}</td> --}}
-                            {{-- <td>{{ $item->musimTanam->nama }}</td> --}}
-                            <td>{{ $item->kabupaten }}</td>
-                            <td>{{ $item->provinsi->name }}</td>
+                            <td>{{ $item->nama }}</td>
+                            <td>{{ $item->provinsi->nama }}</td>
                             <td>
                                 <div class="btn-group">
                                     <a href="{{ route('backend.kabupaten.edit', $item->uuid) }}"

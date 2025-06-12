@@ -60,46 +60,6 @@
     @include('frontend.layout._about')
    <!-- /About Section -->
 
-    <!-- Stats Section -->
-    @include('frontend.layout._stats')
-   <!-- /Stats Section -->
-
-    <!-- Features Section -->
-    @include('frontend.layout._features')
-   <!-- /Features Section -->
-
-    <!-- Services Section -->
-    @include('frontend.layout._servicesSection')
-   <!-- /Services Section -->
-
-    <!-- Appointment Section -->
-    @include('frontend.layout._appointment')
-    <!-- /Appointment Section -->
-
-    <!-- Tabs Section -->
-    @include('frontend.layout._tabs')
-    <!-- /Tabs Section -->
-
-    <!-- Testimonials Section -->
-    @include('frontend.layout._testimonials')
-    <!-- /Testimonials Section -->
-
-    <!-- Doctors Section -->
-    @include('frontend.layout._doctors')
-   <!-- /Doctors Section -->
-
-    <!-- Gallery Section -->
-    @include('frontend.layout._gallery')
-    <!-- /Gallery Section -->
-
-    <!-- Pricing Section -->
-    @include('frontend.layout._pricing')
-   <!-- /Pricing Section -->
-
-    <!-- Faq Section -->
-    @include('frontend.layout._faq')
-    <!-- /Faq Section -->
-
     <!-- Contact Section -->
     @include('frontend.layout._contact')
    <!-- /Contact Section -->

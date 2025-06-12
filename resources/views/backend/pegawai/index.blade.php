@@ -58,12 +58,6 @@
                             <td>{{ $item->alamat }}</td>
                             <td>
                                 <div class="btn-group">
-                                    <a href="{{ route('backend.pegawai.show', $item->uuid) }}"
-                                        class="btn btn-sm btn-info">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-
-
                                     <a href="{{ route('backend.pegawai.edit', $item->uuid) }}"
                                         class="btn btn-sm btn-primary">
                                         <i class="fas fa-edit"></i>
